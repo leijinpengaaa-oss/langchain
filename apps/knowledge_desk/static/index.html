@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>知行 · 知识与工单助手</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="知行首页"><span class="brand-icon">知</span><span>知行<small>KNOWLEDGE DESK</small></span></a>
+    <button id="new-session" class="new-button"><span>＋</span> 新建对话</button>
+    <nav aria-label="主导航">
+      <button data-view="chat" class="nav-item active"><span>◌</span> 智能对话</button>
+      <button data-view="library" class="nav-item"><span>▤</span> 知识库 <b id="doc-count">0</b></button>
+      <button data-view="tickets" class="nav-item"><span>▣</span> 工单中心 <b id="ticket-count">0</b></button>
+      <button data-view="runs" class="nav-item"><span>⌁</span> 运行记录</button>
+    </nav>
+    <div class="sidebar-heading">最近对话</div><div id="session-list" class="session-list"></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span id="model-name">连接模型中…</span><small>本地工作空间 · 数据持久保存</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div>个人工作台 <span>/</span> <strong id="page-title">智能对话</strong></div><span class="local-badge">● 本机运行</span></header>
+    <div id="offline-banner" class="offline-banner" hidden>当前为离线示例模式，回答直接摘录资料，不调用千问。</div>
+    <div class="workspace">
+      <section id="view-chat" class="view chat-view">
+        <div id="welcome" class="welcome">
+          <span class="eyebrow">从知识到行动</span><h1>让每个回答，都有据可循。</h1>
+          <p>查阅你的文档，整理问题，再把下一步交给工单。<br>需要写入的操作，会先等你确认。</p>
+          <div class="starter-grid">
+            <button data-question="星舟服务启动失败，应该按什么顺序排查？"><span>01 / 排查问题</span><strong>服务启动失败，先检查什么？</strong><small>从部署手册找到具体步骤 ↗</small></button>
+            <button data-question="星舟工单的优先级和首次响应时间分别是什么？"><span>02 / 查阅规范</span><strong>不同优先级，多久响应？</strong><small>带着引用理解业务规则 ↗</small></button>
+            <button data-question="星舟服务连续三次启动失败，帮我生成一张部署工单。" data-mode="ticket"><span>03 / 开始行动</span><strong>把启动故障整理成工单</strong><small>审核草稿后，再保存工单 ↗</small></button>
+          </div>
+          <div class="sample-note">已准备 3 份星舟示例资料，也可以上传自己的文档。</div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <section id="approval" class="approval" hidden>
+          <div class="approval-head"><span class="approval-dot"></span><div><h2>请审核这份工单</h2><p>请核对故障事实、已执行措施与优先级，确认后才会保存。</p></div><span class="pill">待确认</span></div>
+          <label>标题<input id="draft-title" maxlength="120"></label>
+          <label>问题描述<textarea id="draft-description" rows="5" maxlength="4000"></textarea></label>
+          <div class="form-row"><label>优先级<select id="draft-priority"><option value="low">低 · 咨询优化</option><option value="normal">普通 · 功能受影响</option><option value="high">高 · 生产不可用</option></select></label><label>分类<select id="draft-category"><option value="deployment">部署</option><option value="account">账号</option><option value="api">接口</option><option value="other">其他</option></select></label></div>
+          <div class="approval-actions"><button id="reject" class="button ghost">取消创建</button><button id="approve" class="button primary">确认并创建工单</button></div>
+        </section>
+        <div id="run-error" class="run-error" hidden><span id="run-error-text"></span><button id="retry" class="button ghost">从检查点继续</button></div>
+        <form id="chat-form" class="composer"><label class="sr-only" for="question">你的问题</label><textarea id="question" rows="2" maxlength="2000" placeholder="询问文档内容，或描述一个需要处理的问题…"></textarea><div class="composer-bottom"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" type="submit" class="send-button">发送 ↑</button></div></form>
+        <div class="composer-note">回答基于知识库资料。重要操作请核对来源与工单内容。</div>
+      </section>
+      <section id="view-library" class="view content-view" hidden>
+        <div class="section-head"><div><span class="eyebrow">你的资料，回答的依据</span><h1>知识库</h1><p>上传文档后即可提问，回答会关联到原文片段。</p></div><button id="upload-button" class="button primary">＋ 上传文档</button></div>
+        <input id="upload-input" type="file" accept=".md,.txt,.pdf" multiple hidden>
+        <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="上传文档"><span>▤</span><strong>拖放文件到这里，或点击上传</strong><p>Markdown / TXT / PDF · 单个文件最多 5 MB</p><small>PDF 需要包含文字层；文本文件使用 UTF-8 编码。</small></div>
+        <details class="retrieval-lab" open>
+          <summary>检索效果对比<span>换一种说法，看看能否找到同一份依据</span></summary>
+          <form id="search-form" class="search-form"><label for="search-query" class="sr-only">检索问题</label><input id="search-query" maxlength="2000" placeholder="例如：星舟下线时，没做完的任务咋办？"><button id="search-submit" class="button primary" type="submit">试检索</button></form>
+          <p id="search-summary" class="search-summary" aria-live="polite">同时查看原始关键词匹配和当前检索的前三条来源。第一次会建立语义索引，之后自动复用。</p>
+          <div id="search-comparison" class="search-comparison" hidden><section><h2>原始关键词匹配</h2><div id="search-baseline"></div></section><section><h2 id="search-current-title">当前检索</h2><div id="search-current"></div></section></div>
+          <button id="ask-search" class="button ghost" type="button" hidden>用这个问题继续对话 →</button>
+        </details>
+        <div class="table-wrap"><table><thead><tr><th>文档名称</th><th>格式</th><th>片段数</th><th>上传时间</th><th></th></tr></thead><tbody id="document-list"></tbody></table></div>
+      </section>
+      <section id="view-tickets" class="view content-view" hidden><div class="section-head"><div><span class="eyebrow">把下一步落到实处</span><h1>工单中心</h1><p>查看审核后创建的工单，并更新处理状态。</p></div></div><div id="ticket-list" class="ticket-list"></div></section>
+      <section id="view-runs" class="view content-view" hidden><div class="section-head"><div><span class="eyebrow">每一次执行，都可以回看</span><h1>运行记录</h1><p>查看问题、执行状态、模型调用与用量。</p></div></div><div id="run-stats" class="stats-grid"></div><div class="table-wrap"><table><thead><tr><th>问题</th><th>状态</th><th>模型调用</th><th>Tokens</th><th>模型耗时</th><th></th></tr></thead><tbody id="run-list"></tbody></table></div></section>
+      <aside id="inspector" class="inspector"><div class="inspector-title">本轮工作过程 <span>LIVE</span></div><div id="trace-empty" class="trace-empty">发送问题后，<br>这里会展示检索、回答与审批进度。</div><div id="timeline" class="timeline"></div><div class="inspector-foot"><span>●</span> 状态会保存，可在重启后继续</div></aside>
+    </div>
+  </main>
+  <dialog id="source-dialog"><div class="dialog-head"><div><span class="eyebrow">引用原文</span><h2 id="source-name"></h2></div><button id="close-source" class="icon-button" aria-label="关闭引用">×</button></div><p id="source-heading" class="source-heading"></p><pre id="source-text"></pre></dialog>
+  <div id="toast" class="toast" role="alert" hidden></div>
+</body>
+</html>

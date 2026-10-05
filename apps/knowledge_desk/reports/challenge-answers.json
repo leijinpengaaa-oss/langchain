@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-10-05T05:01:47.353895+00:00",
+  "scope": "小样本实时烟雾测试；关键词检查仅是自动代理指标，需要人工复核，不作为整体准确率",
+  "model": "qwen-plus",
+  "embedding_model": "text-embedding-v4",
+  "retrieval_mode": "hybrid",
+  "case_count": 6,
+  "keyword_checks_passed": 6,
+  "p95_seconds": 4.224,
+  "rag_tokens": 7867,
+  "cases": [
+    {
+      "question": "星舟下线时会给正在跑的任务留多长收尾时间？",
+      "answer": "星舟下线时会给正在跑的任务最多45秒收尾时间。服务收到SIGTERM后停止接受新请求，并等待进行中的任务完成；若超时，则保存检查点并在重启后继续执行。",
+      "baseline_answer": "星舟下线时会给正在运行的任务预留10分钟的收尾时间。",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": false,
+      "citation_count": 1,
+      "citations_resolve": true,
+      "elapsed_seconds": 4.224,
+      "tokens": 2615,
+      "model_calls": 6,
+      "baseline_tokens": 96,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "星舟 下线 任务 收尾时间",
+        "elapsed_ms": 942,
+        "embedding_calls": 4,
+        "embedding_tokens": 1206,
+        "cache_hits": 0,
+        "indexed_chunks": 21,
+        "fallback": null
+      }
+    },
+    {
+      "question": "星舟一个租户一分钟能调几回，能同时跑几件事？",
+      "answer": "星舟一个租户（工作空间）每分钟最多60次请求，最多同时运行4个并发任务。超过限额将返回HTTP 429错误，客户端需依据Retry-After头重试。",
+      "baseline_answer": "星舟（XingZhou）是阿里云推出的面向大模型应用的一站式开发平台，其API调用频率限制（QPS）和并发任务数取决于具体的租户套餐、资源配置以及所调用的具体服务（如推理、训练、数据处理等）。官方文档未公开统一的‘每分钟调用次数’或‘同时运行任务数’的固定值；实际限制通常由后台配额系统动态管控，可能受模型实例规格、GPU/CPU资源配额、账户等级（如试用版/标准版/企业版）影响。建议通过星舟控制台的‘配额管理’页面查看当前租户的具体限制，或联系阿里云技术支持获取定制化配额信息。",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": false,
+      "citation_count": 1,
+      "citations_resolve": true,
+      "elapsed_seconds": 3.999,
+      "tokens": 1429,
+      "model_calls": 3,
+      "baseline_tokens": 234,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "星舟 租户 调用频率 并发限制",
+        "elapsed_ms": 185,
+        "embedding_calls": 1,
+        "embedding_tokens": 15,
+        "cache_hits": 21,
+        "indexed_chunks": 0,
+        "fallback": null
+      }
+    },
+    {
+      "question": "Xingzhou backup schedule and retention? 用中文回答。",
+      "answer": "星舟数据库每天02:30执行一次全量备份，备份数据保留14天。",
+      "baseline_answer": "不确定",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": false,
+      "citation_count": 1,
+      "citations_resolve": true,
+      "elapsed_seconds": 2.811,
+      "tokens": 915,
+      "model_calls": 3,
+      "baseline_tokens": 76,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "Xingzhou 备份计划 保留策略",
+        "elapsed_ms": 301,
+        "embedding_calls": 1,
+        "embedding_tokens": 10,
+        "cache_hits": 21,
+        "indexed_chunks": 0,
+        "fallback": null
+      }
+    },
+    {
+      "question": "星舟工单超过响应时限，每小时赔偿多少钱？",
+      "answer": "检索到的资料没有提供足够依据，暂时无法回答这个问题。请补充相关文档。",
+      "baseline_answer": "不确定",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": null,
+      "citation_count": 0,
+      "citations_resolve": true,
+      "elapsed_seconds": 2.052,
+      "tokens": 1373,
+      "model_calls": 3,
+      "baseline_tokens": 76,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "星舟工单 超过响应时限 赔偿标准",
+        "elapsed_ms": 205,
+        "embedding_calls": 1,
+        "embedding_tokens": 16,
+        "cache_hits": 21,
+        "indexed_chunks": 0,
+        "fallback": null
+      }
+    },
+    {
+      "question": "星舟数据库备份的加密密码是什么？",
+      "answer": "检索到的资料没有提供足够依据，暂时无法回答这个问题。请补充相关文档。",
+      "baseline_answer": "不确定",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": null,
+      "citation_count": 0,
+      "citations_resolve": true,
+      "elapsed_seconds": 2.249,
+      "tokens": 1361,
+      "model_calls": 3,
+      "baseline_tokens": 72,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "星舟数据库备份 加密密码",
+        "elapsed_ms": 232,
+        "embedding_calls": 1,
+        "embedding_tokens": 8,
+        "cache_hits": 21,
+        "indexed_chunks": 0,
+        "fallback": null
+      }
+    },
+    {
+      "question": "怎么煮意大利面？",
+      "answer": "当前知识库没有找到足够依据。请上传相关文档，或补充更具体的问题。",
+      "baseline_answer": "煮意大利面的步骤如下：1. 在锅中加入足量水（通常每100克面用1升水），加一勺盐，大火烧开；2. 水沸腾后放入意大利面，轻轻搅动防止粘连；3. 根据包装标注时间煮制（通常8–12分钟），期间可尝一下确认是否达到喜欢的口感（al dente意为有嚼劲）；4. 煮好后用漏勺捞出，保留约半杯面汤备用；5. 可将面条与酱汁（如番茄肉酱、青酱等）在锅中拌匀，必要时加入面汤调节浓稠度；6. 装盘，可撒上奶酪或香草装饰。注意不要冲洗面条，以免冲掉表面淀粉影响酱汁附着。",
+      "keyword_check_pass": true,
+      "baseline_keyword_check_pass": null,
+      "citation_count": 0,
+      "citations_resolve": true,
+      "elapsed_seconds": 1.142,
+      "tokens": 174,
+      "model_calls": 3,
+      "baseline_tokens": 251,
+      "retrieval": {
+        "mode": "hybrid",
+        "query": "怎么煮意大利面？",
+        "elapsed_ms": 189,
+        "embedding_calls": 1,
+        "embedding_tokens": 6,
+        "cache_hits": 21,
+        "indexed_chunks": 0,
+        "fallback": null
+      }
+    }
+  ]
+}

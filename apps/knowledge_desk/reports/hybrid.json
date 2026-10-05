@@ -1,0 +1,3655 @@
+{
+  "created_at": "2026-10-05T04:54:51.342520+00:00",
+  "scope": "自编132条检索评测，含固定开发/验证划分；不是独立盲测或答案准确率",
+  "dataset_sha256": "44ae005e4548051a907d1f84534f2150e5b563ad0f3103f40819bb6567697a5f",
+  "semantic_enabled": true,
+  "embedding_model": "text-embedding-v4",
+  "dimensions": 256,
+  "selected_semantic_threshold": 0.45,
+  "selection": "仅开发集选择阈值；最大化Hit@3与无关拒绝率均值，平局比较MRR再取较高阈值",
+  "rank_constant": 60,
+  "candidate_window": 12,
+  "case_count": 132,
+  "unsupported_fact_count": 6,
+  "unsupported_note": "相近但缺少答案的6条只保留来源记录，不把检索到相关主题算作幻觉；拒答另做真实回答检查",
+  "vectorization_seconds": 3.835,
+  "embedding_stats": {
+    "mode": "hybrid",
+    "query": "",
+    "elapsed_ms": 0,
+    "embedding_calls": 17,
+    "embedding_tokens": 2731,
+    "cache_hits": 0,
+    "indexed_chunks": 21,
+    "fallback": null
+  },
+  "warm_search_p95_ms": 26,
+  "warm_note": "10次相同进程已缓存查询，包含SQLite读取和排名，不含回答生成、网络或首次索引",
+  "calibration": [
+    {
+      "threshold": 0.45,
+      "balanced_hit_rejection": 0.9097222222222222,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.6388888888888888,
+      "hit_at_3": 0.9444444444444444,
+      "mrr_at_3": 0.7777777777777777,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.5,
+      "balanced_hit_rejection": 0.8680555555555556,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.6944444444444444,
+      "hit_at_3": 0.8611111111111112,
+      "mrr_at_3": 0.7685185185185186,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.55,
+      "balanced_hit_rejection": 0.8680555555555556,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.75,
+      "hit_at_3": 0.8611111111111112,
+      "mrr_at_3": 0.8009259259259259,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.6,
+      "balanced_hit_rejection": 0.8263888888888888,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.6944444444444444,
+      "hit_at_3": 0.7777777777777778,
+      "mrr_at_3": 0.7361111111111112,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.65,
+      "balanced_hit_rejection": 0.7708333333333333,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.6388888888888888,
+      "hit_at_3": 0.6666666666666666,
+      "mrr_at_3": 0.6527777777777778,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.7,
+      "balanced_hit_rejection": 0.7291666666666667,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.5555555555555556,
+      "hit_at_3": 0.5833333333333334,
+      "mrr_at_3": 0.5694444444444444,
+      "unrelated_rejection": 0.875
+    },
+    {
+      "threshold": 0.75,
+      "balanced_hit_rejection": 0.7013888888888888,
+      "positive_count": 36,
+      "negative_count": 8,
+      "hit_at_1": 0.5,
+      "hit_at_3": 0.5277777777777778,
+      "mrr_at_3": 0.5138888888888888,
+      "unrelated_rejection": 0.875
+    }
+  ],
+  "summary": {
+    "faq": {
+      "bm25": {
+        "positive_count": 54,
+        "negative_count": 6,
+        "hit_at_1": 0.9444444444444444,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 0.9722222222222222,
+        "unrelated_rejection": 1.0
+      },
+      "expanded_bm25": {
+        "positive_count": 54,
+        "negative_count": 6,
+        "hit_at_1": 0.9444444444444444,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 0.9722222222222222,
+        "unrelated_rejection": 1.0
+      },
+      "semantic": {
+        "positive_count": 54,
+        "negative_count": 6,
+        "hit_at_1": 0.9074074074074074,
+        "hit_at_3": 0.9259259259259259,
+        "mrr_at_3": 0.9135802469135802,
+        "unrelated_rejection": 1.0
+      },
+      "hybrid": {
+        "positive_count": 54,
+        "negative_count": 6,
+        "hit_at_1": 0.9259259259259259,
+        "hit_at_3": 0.9444444444444444,
+        "mrr_at_3": 0.9351851851851852,
+        "unrelated_rejection": 1.0
+      }
+    },
+    "development": {
+      "bm25": {
+        "positive_count": 36,
+        "negative_count": 8,
+        "hit_at_1": 0.25,
+        "hit_at_3": 0.2777777777777778,
+        "mrr_at_3": 0.2638888888888889,
+        "unrelated_rejection": 0.875
+      },
+      "expanded_bm25": {
+        "positive_count": 36,
+        "negative_count": 8,
+        "hit_at_1": 0.4722222222222222,
+        "hit_at_3": 0.5277777777777778,
+        "mrr_at_3": 0.5,
+        "unrelated_rejection": 0.875
+      },
+      "semantic": {
+        "positive_count": 36,
+        "negative_count": 8,
+        "hit_at_1": 0.8055555555555556,
+        "hit_at_3": 0.9444444444444444,
+        "mrr_at_3": 0.8657407407407407,
+        "unrelated_rejection": 1.0
+      },
+      "hybrid": {
+        "positive_count": 36,
+        "negative_count": 8,
+        "hit_at_1": 0.6388888888888888,
+        "hit_at_3": 0.9444444444444444,
+        "mrr_at_3": 0.7777777777777777,
+        "unrelated_rejection": 0.875
+      }
+    },
+    "validation": {
+      "bm25": {
+        "positive_count": 18,
+        "negative_count": 4,
+        "hit_at_1": 0.3888888888888889,
+        "hit_at_3": 0.6111111111111112,
+        "mrr_at_3": 0.48148148148148145,
+        "unrelated_rejection": 1.0
+      },
+      "expanded_bm25": {
+        "positive_count": 18,
+        "negative_count": 4,
+        "hit_at_1": 0.3888888888888889,
+        "hit_at_3": 0.6666666666666666,
+        "mrr_at_3": 0.5092592592592592,
+        "unrelated_rejection": 1.0
+      },
+      "semantic": {
+        "positive_count": 18,
+        "negative_count": 4,
+        "hit_at_1": 0.8333333333333334,
+        "hit_at_3": 0.9444444444444444,
+        "mrr_at_3": 0.8888888888888888,
+        "unrelated_rejection": 1.0
+      },
+      "hybrid": {
+        "positive_count": 18,
+        "negative_count": 4,
+        "hit_at_1": 0.6666666666666666,
+        "hit_at_3": 0.9444444444444444,
+        "mrr_at_3": 0.7962962962962963,
+        "unrelated_rejection": 1.0
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "faq-000",
+      "question": "星舟服务需要哪个Python版本？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "运行环境",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "运行环境",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "运行环境",
+        "启动失败排查",
+        "服务端口与健康检查"
+      ],
+      "hybrid": [
+        "运行环境",
+        "启动失败排查",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "faq-001",
+      "question": "星舟部署最低CPU和内存是多少？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "星舟部署手册（演示资料）",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "星舟部署手册（演示资料）",
+        "运行环境"
+      ],
+      "semantic": [
+        "运行环境",
+        "工单分类",
+        "星舟部署手册（演示资料）"
+      ],
+      "hybrid": [
+        "运行环境",
+        "星舟部署手册（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-002",
+      "question": "星舟要求哪个PostgreSQL版本？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "运行环境",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "运行环境",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "运行环境",
+        "启动失败排查",
+        "数据备份与恢复"
+      ],
+      "hybrid": [
+        "运行环境",
+        "发布与回滚",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "faq-003",
+      "question": "星舟默认监听哪个端口？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "faq-004",
+      "question": "星舟健康检查路径是什么？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "星舟工单规范（演示资料）",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-005",
+      "question": "星舟健康检查正常时返回什么？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "星舟工单规范（演示资料）",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-006",
+      "question": "星舟服务启动失败怎么排查？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "启动失败排查",
+        "工单分类",
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "启动失败排查",
+        "工单分类",
+        "优雅停机"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "工单必填信息",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "工单必填信息",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-007",
+      "question": "星舟启动错误的日志在哪里？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "工单必填信息",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "发布与回滚",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-008",
+      "question": "星舟连续三次启动失败后怎么办？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "发布与回滚",
+        "数据备份与恢复"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "发布与回滚",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-009",
+      "question": "星舟停机最长等待多久？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "审核与取消"
+      ],
+      "semantic": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "审核与取消",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "faq-010",
+      "question": "星舟收到SIGTERM后怎么处理？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "优雅停机",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "优雅停机",
+        "启动失败排查",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "错误码处理",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "faq-011",
+      "question": "星舟停机时未完成任务如何恢复？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "优雅停机",
+        "数据备份与恢复",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "数据备份与恢复",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "优雅停机",
+        "启动失败排查",
+        "工单状态流转"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "数据备份与恢复",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "faq-012",
+      "question": "星舟数据库每天几点备份？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "faq-013",
+      "question": "星舟备份保留多少天？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "数据备份与恢复"
+      ],
+      "expanded_bm25": [
+        "数据备份与恢复"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "faq-014",
+      "question": "星舟多久做一次恢复演练？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "工单优先级与响应时间",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "faq-015",
+      "question": "星舟发布前需要多少条回归用例？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "星舟工单规范（演示资料）",
+        "星舟API指南（演示资料）"
+      ],
+      "hybrid": [
+        "发布与回滚",
+        "工单分类",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-016",
+      "question": "星舟什么情况下触发回滚？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "数据备份与恢复",
+        "优雅停机"
+      ],
+      "hybrid": [
+        "发布与回滚",
+        "数据备份与恢复",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-017",
+      "question": "星舟回滚前应该保留哪些记录？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "发布与回滚",
+        "优雅停机",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "发布与回滚",
+        "优雅停机",
+        "工单分类"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "数据备份与恢复",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "发布与回滚",
+        "工单分类",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "faq-018",
+      "question": "星舟使用什么请求头认证？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "运行环境"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "服务端口与健康检查",
+        "运行环境"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "运行环境",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "faq-019",
+      "question": "星舟API密钥多久轮换？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "运行环境",
+        "数据备份与恢复"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "faq-020",
+      "question": "星舟新旧密钥可以并存多久？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "工单分类"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "数据备份与恢复",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "faq-021",
+      "question": "星舟每分钟请求上限多少？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "请求限流",
+        "会话与权限",
+        "幂等请求"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "会话与权限",
+        "幂等请求"
+      ],
+      "semantic": [
+        "请求限流",
+        "工单优先级与响应时间",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "请求限流",
+        "幂等请求",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "faq-022",
+      "question": "星舟最多支持多少并发任务？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "请求限流",
+        "文件上传限制",
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "文件上传限制",
+        "优雅停机"
+      ],
+      "semantic": [
+        "请求限流",
+        "优雅停机",
+        "会话与权限"
+      ],
+      "hybrid": [
+        "请求限流",
+        "优雅停机",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "faq-023",
+      "question": "星舟429错误如何重试？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "错误码处理",
+        "启动失败排查",
+        "请求限流"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ]
+    },
+    {
+      "id": "faq-024",
+      "question": "星舟创建工单的幂等参数是什么？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "幂等请求",
+        "身份认证与密钥轮换",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "幂等请求",
+        "重试与重复提交",
+        "身份认证与密钥轮换"
+      ],
+      "semantic": [
+        "幂等请求",
+        "审核与取消",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "审核与取消",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "faq-025",
+      "question": "星舟幂等结果保留多久？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "幂等请求"
+      ],
+      "expanded_bm25": [
+        "幂等请求"
+      ],
+      "semantic": [
+        "幂等请求",
+        "优雅停机",
+        "会话与权限"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "优雅停机",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "faq-026",
+      "question": "星舟同一request_id不同内容会怎样？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "幂等请求",
+        "会话与权限",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "幂等请求",
+        "会话与权限",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "幂等请求",
+        "会话与权限",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "会话与权限",
+        "重试与重复提交"
+      ]
+    },
+    {
+      "id": "faq-027",
+      "question": "星舟401和403表示什么？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "错误码处理"
+      ],
+      "expanded_bm25": [
+        "错误码处理"
+      ],
+      "semantic": [
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）",
+        "星舟API指南（演示资料）"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-028",
+      "question": "星舟503最多重试几次？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "错误码处理",
+        "请求限流",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ]
+    },
+    {
+      "id": "faq-029",
+      "question": "星舟哪些错误码不应该自动重试？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "错误码处理",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "错误码处理",
+        "重试与重复提交"
+      ],
+      "semantic": [
+        "错误码处理",
+        "启动失败排查",
+        "幂等请求"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "启动失败排查",
+        "重试与重复提交"
+      ]
+    },
+    {
+      "id": "faq-030",
+      "question": "星舟文件上传最大多少MB？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "文件上传限制"
+      ],
+      "expanded_bm25": [
+        "文件上传限制"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "请求限流",
+        "星舟部署手册（演示资料）"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "请求限流",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-031",
+      "question": "星舟PDF最多支持多少页？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "文件上传限制",
+        "请求限流",
+        "星舟工单规范（演示资料）"
+      ],
+      "expanded_bm25": [
+        "文件上传限制",
+        "请求限流",
+        "星舟工单规范（演示资料）"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "请求限流",
+        "星舟部署手册（演示资料）"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "请求限流",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-032",
+      "question": "星舟扫描PDF该怎么处理？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "文件上传限制",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "文件上传限制",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "工单状态流转",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-033",
+      "question": "星舟会话用什么标识保存状态？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "会话与权限",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "会话与权限",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "会话与权限",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-034",
+      "question": "星舟能访问别人的会话吗？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "会话与权限"
+      ],
+      "semantic": [
+        "会话与权限",
+        "星舟部署手册（演示资料）",
+        "幂等请求"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "星舟部署手册（演示资料）",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "faq-035",
+      "question": "星舟同一会话并发修改会怎样？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "会话与权限",
+        "请求限流",
+        "幂等请求"
+      ],
+      "expanded_bm25": [
+        "会话与权限",
+        "请求限流",
+        "幂等请求"
+      ],
+      "semantic": [
+        "会话与权限",
+        "幂等请求",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "幂等请求",
+        "请求限流"
+      ]
+    },
+    {
+      "id": "faq-036",
+      "question": "星舟工单必须填写哪些信息？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单必填信息",
+        "幂等请求",
+        "星舟工单规范（演示资料）"
+      ],
+      "expanded_bm25": [
+        "工单必填信息",
+        "幂等请求",
+        "星舟工单规范（演示资料）"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "faq-037",
+      "question": "星舟工单标题最长多少字符？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "hybrid": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-038",
+      "question": "星舟工单描述不能包含什么信息？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "重试与重复提交"
+      ],
+      "expanded_bm25": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-039",
+      "question": "星舟high优先级多久首次响应？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "faq-040",
+      "question": "星舟normal优先级首次响应目标？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "发布与回滚",
+        "优雅停机"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "faq-041",
+      "question": "星舟low优先级首次响应时间？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "工单必填信息"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "工单必填信息",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "faq-042",
+      "question": "星舟工单有哪些类别？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "faq-043",
+      "question": "星舟数据库连接故障归哪个工单类别？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单分类",
+        "数据备份与恢复",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "数据备份与恢复",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "工单分类",
+        "启动失败排查",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "工单分类",
+        "启动失败排查",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "faq-044",
+      "question": "星舟限流故障归哪个工单类别？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单分类",
+        "工单优先级与响应时间",
+        "请求限流"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "请求限流",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "工单分类",
+        "工单必填信息",
+        "请求限流"
+      ],
+      "hybrid": [
+        "工单分类",
+        "工单必填信息",
+        "请求限流"
+      ]
+    },
+    {
+      "id": "faq-045",
+      "question": "星舟工单草稿可以修改什么？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ],
+      "expanded_bm25": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ],
+      "semantic": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-046",
+      "question": "星舟用户拒绝工单审批后怎么办？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "审核与取消",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "审核与取消",
+        "工单状态流转",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "审核与取消",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "hybrid": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-047",
+      "question": "星舟审批期间重启能继续吗？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "审核与取消",
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "审核与取消",
+        "优雅停机"
+      ],
+      "semantic": [
+        "审核与取消",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "审核与取消",
+        "优雅停机",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "faq-048",
+      "question": "星舟工单有哪几种状态？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "faq-049",
+      "question": "星舟问题解决后如何更新工单？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单状态流转",
+        "工单分类",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "工单状态流转",
+        "工单分类",
+        "审核与取消"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "工单必填信息",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "工单必填信息",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "faq-050",
+      "question": "星舟工单由谁修改状态？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "工单状态流转",
+        "会话与权限",
+        "星舟工单规范（演示资料）"
+      ],
+      "expanded_bm25": [
+        "工单状态流转",
+        "会话与权限",
+        "星舟工单规范（演示资料）"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "审核与取消",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "faq-051",
+      "question": "星舟工单网络断开后怎么重新提交？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "重试与重复提交",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "重试与重复提交",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "semantic": [
+        "幂等请求",
+        "工单必填信息",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单必填信息",
+        "工单分类",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "faq-052",
+      "question": "星舟工单响应丢失能再建一张吗？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "重试与重复提交",
+        "工单优先级与响应时间",
+        "星舟工单规范（演示资料）"
+      ],
+      "expanded_bm25": [
+        "重试与重复提交",
+        "工单优先级与响应时间",
+        "星舟工单规范（演示资料）"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "幂等请求",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "工单优先级与响应时间",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "faq-053",
+      "question": "星舟恢复工单任务前应该检查什么？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [
+        "优雅停机",
+        "重试与重复提交",
+        "数据备份与恢复"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "重试与重复提交",
+        "数据备份与恢复"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "工单状态流转",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "启动失败排查",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "faq-054",
+      "question": "法国首都天气预报",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "faq-055",
+      "question": "今年世界杯冠军",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "faq-056",
+      "question": "推荐一款手机",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "faq-057",
+      "question": "股票明天会上涨吗",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "faq-058",
+      "question": "番茄炒蛋食谱",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "faq-059",
+      "question": "月球距离地球有多远",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "faq",
+      "tag": "literal",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "paraphrase-00-0",
+      "question": "给星舟配一台机器，最少得有多少算力和内存？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "运行环境"
+      ],
+      "semantic": [
+        "运行环境",
+        "工单必填信息",
+        "身份认证与密钥轮换"
+      ],
+      "hybrid": [
+        "运行环境",
+        "工单必填信息",
+        "身份认证与密钥轮换"
+      ]
+    },
+    {
+      "id": "paraphrase-00-1",
+      "question": "What runtime and database versions does Xingzhou require?",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "数据备份与恢复",
+        "运行环境"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "数据备份与恢复",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "paraphrase-00-2",
+      "question": "我要给星舟开虚拟机，配置门槛有哪些？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [
+        "运行环境",
+        "星舟部署手册（演示资料）",
+        "工单分类"
+      ],
+      "hybrid": [
+        "运行环境",
+        "星舟部署手册（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-01-0",
+      "question": "负载均衡想探测星舟还活着，该访问哪个地址？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "会话与权限"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-01-1",
+      "question": "Xingzhou readiness probe URL and timeout?",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "身份认证与密钥轮换"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-01-2",
+      "question": "监控要确认星舟在线，探活接口和正常响应怎么配？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单分类",
+        "工单优先级与响应时间",
+        "服务端口与健康检查"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "服务端口与健康检查",
+        "工单优先级与响应时间"
+      ],
+      "semantic": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "服务端口与健康检查",
+        "工单分类",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-02-0",
+      "question": "星舟起不来，排障从哪儿开始看？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [
+        "启动失败排查",
+        "工单必填信息",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "工单必填信息",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "paraphrase-02-1",
+      "question": "Where should I look when Xingzhou cannot boot?",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-02-2",
+      "question": "星舟启动一直报错，定位问题的先后次序是什么？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单分类",
+        "启动失败排查",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "启动失败排查",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "工单必填信息",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "工单分类",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-03-0",
+      "question": "星舟进程准备退出，手头没干完的活咋办？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [
+        "优雅停机",
+        "审核与取消",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "审核与取消",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-03-1",
+      "question": "How does Xingzhou drain in-flight work on SIGTERM?",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "优雅停机",
+        "启动失败排查",
+        "重试与重复提交"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "启动失败排查",
+        "重试与重复提交"
+      ]
+    },
+    {
+      "id": "paraphrase-03-2",
+      "question": "星舟下线时会给正在跑的任务留多长收尾时间？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "工单必填信息"
+      ],
+      "expanded_bm25": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-04-0",
+      "question": "星舟的库坏了，找哪天的副本，怎样安全救回来？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [
+        "启动失败排查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "paraphrase-04-1",
+      "question": "Xingzhou backup schedule, retention, and restore drill?",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "paraphrase-04-2",
+      "question": "星舟的历史数据副本几点留、能留多久？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "数据备份与恢复"
+      ],
+      "expanded_bm25": [
+        "数据备份与恢复"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "工单优先级与响应时间",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "数据备份与恢复",
+        "工单优先级与响应时间",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "paraphrase-05-0",
+      "question": "星舟上线后大量报错，什么条件下退回老版本？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "发布与回滚",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "发布与回滚",
+        "运行环境"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "启动失败排查",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "发布与回滚",
+        "运行环境",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-05-1",
+      "question": "When should a Xingzhou release be rolled back?",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "发布与回滚",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-05-2",
+      "question": "星舟升级完错误变多了，降回旧版前要留哪些东西？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "错误码处理"
+      ],
+      "expanded_bm25": [
+        "错误码处理"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "数据备份与恢复",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "发布与回滚",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "paraphrase-06-0",
+      "question": "星舟换访问令牌时，旧的还能用多久？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "会话与权限"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-06-1",
+      "question": "How to rotate Xingzhou API credentials without downtime?",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查",
+        "星舟API指南（演示资料）"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "启动失败排查",
+        "工单分类"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "错误码处理",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "启动失败排查",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-06-2",
+      "question": "调用星舟接口的凭据放网址里行吗，隔多久换一次？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "数据备份与恢复"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "数据备份与恢复"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "运行环境",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-07-0",
+      "question": "星舟说我请求太频繁了，缓多久再发？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "请求限流",
+        "幂等请求",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "幂等请求",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "请求限流",
+        "工单优先级与响应时间",
+        "幂等请求"
+      ],
+      "hybrid": [
+        "请求限流",
+        "幂等请求",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-07-1",
+      "question": "What should a Xingzhou client do on HTTP429?",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "错误码处理",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "错误码处理",
+        "请求限流",
+        "幂等请求"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "请求限流",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-07-2",
+      "question": "星舟一个租户一分钟能调几回，能同时跑几件事？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "会话与权限"
+      ],
+      "semantic": [
+        "请求限流",
+        "工单优先级与响应时间",
+        "会话与权限"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "请求限流",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "paraphrase-08-0",
+      "question": "星舟建单点了两次，怎样还拿到同一个编号？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "重试与重复提交",
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "重试与重复提交",
+        "会话与权限"
+      ],
+      "semantic": [
+        "幂等请求",
+        "工单状态流转",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "重试与重复提交",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "paraphrase-08-1",
+      "question": "Which idempotency key is needed for Xingzhou ticket creation?",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "幂等请求",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "幂等请求",
+        "重试与重复提交",
+        "会话与权限"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "重试与重复提交",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-08-2",
+      "question": "星舟建单同一个请求标识换了内容，服务怎么处理？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限",
+        "幂等请求",
+        "错误码处理"
+      ],
+      "expanded_bm25": [
+        "会话与权限",
+        "幂等请求",
+        "错误码处理"
+      ],
+      "semantic": [
+        "幂等请求",
+        "错误码处理",
+        "会话与权限"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "会话与权限",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-09-0",
+      "question": "星舟说没权限或者凭据失效，能无限重发吗？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限",
+        "启动失败排查",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "会话与权限",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "错误码处理",
+        "身份认证与密钥轮换",
+        "请求限流"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "启动失败排查",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-09-1",
+      "question": "Which Xingzhou status codes should never be retried?",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "错误码处理",
+        "重试与重复提交",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "错误码处理",
+        "服务端口与健康检查"
+      ]
+    },
+    {
+      "id": "paraphrase-09-2",
+      "question": "星舟返回５０３，重发上限和等待策略是啥？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "请求限流",
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "优雅停机",
+        "错误码处理"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "错误码处理",
+        "发布与回滚"
+      ],
+      "hybrid": [
+        "错误码处理",
+        "请求限流",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "paraphrase-10-0",
+      "question": "星舟不认识我扫出来的文档，怎么让它读到字？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "星舟部署手册（演示资料）"
+      ],
+      "expanded_bm25": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "星舟工单规范（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-10-1",
+      "question": "Can Xingzhou ingest scanned PDFs directly?",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "启动失败排查",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-10-2",
+      "question": "星舟收资料时，大小、页数和字符编码有啥门槛？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ],
+      "expanded_bm25": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "星舟工单规范（演示资料）",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "星舟工单规范（演示资料）",
+        "文件上传限制",
+        "星舟API指南（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-11-0",
+      "question": "星舟两个人能互相看聊天和资料吗？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ],
+      "expanded_bm25": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ],
+      "semantic": [
+        "星舟工单规范（演示资料）",
+        "星舟API指南（演示资料）",
+        "星舟部署手册（演示资料）"
+      ],
+      "hybrid": [
+        "星舟工单规范（演示资料）",
+        "星舟API指南（演示资料）",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-11-1",
+      "question": "How does Xingzhou isolate conversations and concurrent edits?",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "会话与权限",
+        "启动失败排查",
+        "工单状态流转"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "会话与权限",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-11-2",
+      "question": "星舟两条消息同时改一个聊天线程会怎样？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "会话与权限"
+      ],
+      "semantic": [
+        "会话与权限",
+        "幂等请求",
+        "审核与取消"
+      ],
+      "hybrid": [
+        "会话与权限",
+        "幂等请求",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "paraphrase-12-0",
+      "question": "给星舟提问题单，要把哪些故障细节交代清楚？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单分类",
+        "工单必填信息",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "工单必填信息",
+        "工单状态流转"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "启动失败排查",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "工单必填信息",
+        "工单状态流转",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-12-1",
+      "question": "What must a Xingzhou incident report contain?",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "启动失败排查",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-12-2",
+      "question": "写星舟问题单时，哪些敏感内容绝对不能塞进去？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "幂等请求",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "幂等请求",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "hybrid": [
+        "星舟工单规范（演示资料）",
+        "工单分类",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-13-0",
+      "question": "星舟线上彻底挂了，值班的人多久先回复我？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [],
+      "expanded_bm25": [
+        "工单优先级与响应时间"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "启动失败排查",
+        "优雅停机"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "启动失败排查",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "paraphrase-13-1",
+      "question": "Xingzhou SLA for high, normal and low priority incidents?",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "工单优先级与响应时间",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-13-2",
+      "question": "星舟只是咨询优化，最迟几个工作日收到第一次回应？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "数据备份与恢复"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "数据备份与恢复"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "数据备份与恢复",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "paraphrase-14-0",
+      "question": "星舟连不上库，这张问题单该分给哪类？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单分类",
+        "工单状态流转"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "工单状态流转",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "hybrid": [
+        "工单分类",
+        "工单状态流转",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-14-1",
+      "question": "Which category handles Xingzhou launch and release failures?",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "发布与回滚",
+        "启动失败排查",
+        "工单分类"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "发布与回滚",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-14-2",
+      "question": "星舟接口请求太多被拒，该归账号还是接口类？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单分类",
+        "请求限流",
+        "幂等请求"
+      ],
+      "expanded_bm25": [
+        "工单分类",
+        "请求限流",
+        "幂等请求"
+      ],
+      "semantic": [
+        "请求限流",
+        "错误码处理",
+        "幂等请求"
+      ],
+      "hybrid": [
+        "请求限流",
+        "工单分类",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "paraphrase-15-0",
+      "question": "星舟还没点确认就断电，问题单草稿回来还能审吗？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "审核与取消",
+        "工单必填信息",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "审核与取消",
+        "工单必填信息",
+        "工单分类"
+      ],
+      "semantic": [
+        "审核与取消",
+        "幂等请求",
+        "工单必填信息"
+      ],
+      "hybrid": [
+        "审核与取消",
+        "工单必填信息",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-15-1",
+      "question": "Does rejecting a Xingzhou draft create a ticket?",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "审核与取消",
+        "幂等请求",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "审核与取消",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "paraphrase-15-2",
+      "question": "星舟机器重开后，没审完的草稿还能接着处理吗？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "错误码处理",
+        "工单状态流转",
+        "审核与取消"
+      ],
+      "expanded_bm25": [
+        "错误码处理",
+        "工单状态流转",
+        "审核与取消"
+      ],
+      "semantic": [
+        "审核与取消",
+        "工单状态流转",
+        "优雅停机"
+      ],
+      "hybrid": [
+        "审核与取消",
+        "工单状态流转",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-16-0",
+      "question": "星舟问题已经处理好了，单子接下来怎么标记？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单状态流转",
+        "错误码处理",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "工单状态流转",
+        "错误码处理",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "审核与取消",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "工单分类",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "paraphrase-16-1",
+      "question": "What is the Xingzhou ticket lifecycle?",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "启动失败排查"
+      ],
+      "semantic": [
+        "工单状态流转"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-16-2",
+      "question": "星舟的问题单从收到到办完有哪些状态？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "工单状态流转",
+        "优雅停机",
+        "工单分类"
+      ],
+      "expanded_bm25": [
+        "工单状态流转",
+        "优雅停机",
+        "工单分类"
+      ],
+      "semantic": [
+        "工单状态流转",
+        "审核与取消",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "工单状态流转",
+        "工单分类",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-17-0",
+      "question": "星舟已经存了单但我没收到回包，再跑会不会多一张？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "bm25": [
+        "优雅停机"
+      ],
+      "expanded_bm25": [
+        "优雅停机"
+      ],
+      "semantic": [
+        "审核与取消",
+        "幂等请求",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "审核与取消",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "paraphrase-17-1",
+      "question": "How to recover a Xingzhou ticket operation after a lost response?",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "bm25": [
+        "请求限流",
+        "启动失败排查"
+      ],
+      "expanded_bm25": [
+        "请求限流",
+        "启动失败排查"
+      ],
+      "semantic": [
+        "重试与重复提交",
+        "错误码处理",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "启动失败排查",
+        "重试与重复提交",
+        "请求限流"
+      ]
+    },
+    {
+      "id": "paraphrase-17-2",
+      "question": "星舟建单后断网，用老请求编号再发会怎样？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "bm25": [
+        "幂等请求",
+        "请求限流",
+        "发布与回滚"
+      ],
+      "expanded_bm25": [
+        "幂等请求",
+        "请求限流",
+        "发布与回滚"
+      ],
+      "semantic": [
+        "幂等请求",
+        "重试与重复提交",
+        "错误码处理"
+      ],
+      "hybrid": [
+        "幂等请求",
+        "请求限流",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "unrelated-00",
+      "question": "怎么煮意大利面？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-01",
+      "question": "Which camera should I buy for travel?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-02",
+      "question": "猫咪为什么喜欢纸箱？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-03",
+      "question": "How far is Mars from the sun?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-04",
+      "question": "给我写一首秋天的诗",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-05",
+      "question": "明天上海是否下雨？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-06",
+      "question": "What is the capital of Canada?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-07",
+      "question": "英国国王是谁？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-08",
+      "question": "南极企鹅有哪些种类？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-09",
+      "question": "烤蛋糕要放多少糖？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "unrelated-10",
+      "question": "电影盗梦空间讲了什么？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "bm25": [
+        "请求限流"
+      ],
+      "expanded_bm25": [
+        "请求限流"
+      ],
+      "semantic": [],
+      "hybrid": [
+        "请求限流"
+      ]
+    },
+    {
+      "id": "unrelated-11",
+      "question": "太阳的温度有多高？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "bm25": [],
+      "expanded_bm25": [],
+      "semantic": [],
+      "hybrid": []
+    },
+    {
+      "id": "missing-fact-00",
+      "question": "星舟工单超过响应时限，每小时赔偿多少钱？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "bm25": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "幂等请求"
+      ],
+      "expanded_bm25": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "工单必填信息",
+        "星舟工单规范（演示资料）"
+      ],
+      "hybrid": [
+        "工单优先级与响应时间",
+        "工单必填信息",
+        "请求限流"
+      ]
+    },
+    {
+      "id": "missing-fact-01",
+      "question": "星舟数据库备份的加密密码是什么？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "bm25": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "semantic": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "hybrid": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "missing-fact-02",
+      "question": "星舟API密钥当前的真实值是什么？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ],
+      "expanded_bm25": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ],
+      "semantic": [
+        "身份认证与密钥轮换",
+        "运行环境",
+        "星舟API指南（演示资料）"
+      ],
+      "hybrid": [
+        "身份认证与密钥轮换",
+        "星舟API指南（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "missing-fact-03",
+      "question": "星舟每次服务重启的计费价格是多少？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "bm25": [
+        "启动失败排查",
+        "优雅停机",
+        "会话与权限"
+      ],
+      "expanded_bm25": [
+        "启动失败排查",
+        "优雅停机",
+        "会话与权限"
+      ],
+      "semantic": [
+        "工单优先级与响应时间",
+        "运行环境",
+        "工单分类"
+      ],
+      "hybrid": [
+        "优雅停机",
+        "启动失败排查",
+        "工单优先级与响应时间"
+      ]
+    },
+    {
+      "id": "missing-fact-04",
+      "question": "星舟生产机器的公网IP地址是什么？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "bm25": [
+        "发布与回滚",
+        "运行环境"
+      ],
+      "expanded_bm25": [
+        "发布与回滚",
+        "运行环境"
+      ],
+      "semantic": [
+        "运行环境",
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "hybrid": [
+        "运行环境",
+        "发布与回滚",
+        "服务端口与健康检查"
+      ]
+    },
+    {
+      "id": "missing-fact-05",
+      "question": "星舟上传文档后用于训练的保留期限是多少？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "bm25": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "工单优先级与响应时间"
+      ],
+      "expanded_bm25": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "工单优先级与响应时间"
+      ],
+      "semantic": [
+        "文件上传限制",
+        "数据备份与恢复",
+        "工单优先级与响应时间"
+      ],
+      "hybrid": [
+        "文件上传限制",
+        "工单优先级与响应时间",
+        "星舟部署手册（演示资料）"
+      ]
+    }
+  ]
+}

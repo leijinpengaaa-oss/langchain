@@ -1,0 +1,901 @@
+{
+  "created_at": "2026-10-05T03:32:25.063572+00:00",
+  "scope": "自编星舟示例FAQ；离线检索评测，不代表模型回答准确率或真实企业数据效果",
+  "case_count": 60,
+  "positive_count": 54,
+  "negative_count": 6,
+  "bm25_hit_at_3": 1.0,
+  "baseline_hit_at_3": 1.0,
+  "bm25_negative_rejection": 1.0,
+  "cases": [
+    {
+      "question": "星舟服务需要哪个Python版本？",
+      "heading": "运行环境",
+      "bm25_sources": [
+        "运行环境",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "baseline_sources": [
+        "运行环境",
+        "启动失败排查",
+        "优雅停机"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟部署最低CPU和内存是多少？",
+      "heading": "运行环境",
+      "bm25_sources": [
+        "星舟部署手册（演示资料）",
+        "运行环境"
+      ],
+      "baseline_sources": [
+        "运行环境",
+        "工单分类",
+        "星舟部署手册（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟要求哪个PostgreSQL版本？",
+      "heading": "运行环境",
+      "bm25_sources": [
+        "运行环境",
+        "发布与回滚"
+      ],
+      "baseline_sources": [
+        "运行环境",
+        "发布与回滚",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟默认监听哪个端口？",
+      "heading": "服务端口与健康检查",
+      "bm25_sources": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ],
+      "baseline_sources": [
+        "服务端口与健康检查",
+        "启动失败排查",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟健康检查路径是什么？",
+      "heading": "服务端口与健康检查",
+      "bm25_sources": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "baseline_sources": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟健康检查正常时返回什么？",
+      "heading": "服务端口与健康检查",
+      "bm25_sources": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "baseline_sources": [
+        "服务端口与健康检查",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟服务启动失败怎么排查？",
+      "heading": "启动失败排查",
+      "bm25_sources": [
+        "启动失败排查",
+        "工单分类",
+        "优雅停机"
+      ],
+      "baseline_sources": [
+        "启动失败排查",
+        "工单分类",
+        "优雅停机"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟启动错误的日志在哪里？",
+      "heading": "启动失败排查",
+      "bm25_sources": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "baseline_sources": [
+        "工单分类",
+        "启动失败排查",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟连续三次启动失败后怎么办？",
+      "heading": "启动失败排查",
+      "bm25_sources": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "baseline_sources": [
+        "启动失败排查",
+        "工单分类",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟停机最长等待多久？",
+      "heading": "优雅停机",
+      "bm25_sources": [
+        "优雅停机"
+      ],
+      "baseline_sources": [
+        "优雅停机",
+        "请求限流",
+        "审核与取消"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟收到SIGTERM后怎么处理？",
+      "heading": "优雅停机",
+      "bm25_sources": [
+        "优雅停机",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "baseline_sources": [
+        "优雅停机",
+        "工单状态流转",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟停机时未完成任务如何恢复？",
+      "heading": "优雅停机",
+      "bm25_sources": [
+        "优雅停机",
+        "数据备份与恢复",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "优雅停机",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟数据库每天几点备份？",
+      "heading": "数据备份与恢复",
+      "bm25_sources": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ],
+      "baseline_sources": [
+        "数据备份与恢复",
+        "幂等请求",
+        "工单分类"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟备份保留多少天？",
+      "heading": "数据备份与恢复",
+      "bm25_sources": [
+        "数据备份与恢复"
+      ],
+      "baseline_sources": [
+        "数据备份与恢复",
+        "幂等请求",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟多久做一次恢复演练？",
+      "heading": "数据备份与恢复",
+      "bm25_sources": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "数据备份与恢复",
+        "身份认证与密钥轮换",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟发布前需要多少条回归用例？",
+      "heading": "发布与回滚",
+      "bm25_sources": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "baseline_sources": [
+        "发布与回滚",
+        "工单分类",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟什么情况下触发回滚？",
+      "heading": "发布与回滚",
+      "bm25_sources": [
+        "发布与回滚",
+        "工单分类"
+      ],
+      "baseline_sources": [
+        "工单分类",
+        "发布与回滚",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟回滚前应该保留哪些记录？",
+      "heading": "发布与回滚",
+      "bm25_sources": [
+        "发布与回滚",
+        "优雅停机",
+        "工单分类"
+      ],
+      "baseline_sources": [
+        "发布与回滚",
+        "身份认证与密钥轮换",
+        "幂等请求"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟使用什么请求头认证？",
+      "heading": "身份认证与密钥轮换",
+      "bm25_sources": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "运行环境"
+      ],
+      "baseline_sources": [
+        "身份认证与密钥轮换",
+        "会话与权限",
+        "请求限流"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟API密钥多久轮换？",
+      "heading": "身份认证与密钥轮换",
+      "bm25_sources": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ],
+      "baseline_sources": [
+        "身份认证与密钥轮换",
+        "工单必填信息",
+        "工单分类"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟新旧密钥可以并存多久？",
+      "heading": "身份认证与密钥轮换",
+      "bm25_sources": [
+        "身份认证与密钥轮换",
+        "会话与权限"
+      ],
+      "baseline_sources": [
+        "身份认证与密钥轮换",
+        "错误码处理",
+        "会话与权限"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟每分钟请求上限多少？",
+      "heading": "请求限流",
+      "bm25_sources": [
+        "请求限流",
+        "会话与权限",
+        "幂等请求"
+      ],
+      "baseline_sources": [
+        "请求限流",
+        "会话与权限",
+        "身份认证与密钥轮换"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟最多支持多少并发任务？",
+      "heading": "请求限流",
+      "bm25_sources": [
+        "请求限流",
+        "文件上传限制",
+        "优雅停机"
+      ],
+      "baseline_sources": [
+        "请求限流",
+        "文件上传限制",
+        "幂等请求"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟429错误如何重试？",
+      "heading": "请求限流",
+      "bm25_sources": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "请求限流",
+        "错误码处理",
+        "工单分类"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟创建工单的幂等参数是什么？",
+      "heading": "幂等请求",
+      "bm25_sources": [
+        "幂等请求",
+        "身份认证与密钥轮换",
+        "审核与取消"
+      ],
+      "baseline_sources": [
+        "幂等请求",
+        "身份认证与密钥轮换",
+        "审核与取消"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟幂等结果保留多久？",
+      "heading": "幂等请求",
+      "bm25_sources": [
+        "幂等请求"
+      ],
+      "baseline_sources": [
+        "幂等请求",
+        "数据备份与恢复",
+        "发布与回滚"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟同一request_id不同内容会怎样？",
+      "heading": "幂等请求",
+      "bm25_sources": [
+        "幂等请求",
+        "会话与权限",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "幂等请求",
+        "文件上传限制",
+        "会话与权限"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟401和403表示什么？",
+      "heading": "错误码处理",
+      "bm25_sources": [
+        "错误码处理"
+      ],
+      "baseline_sources": [
+        "错误码处理",
+        "星舟API指南（演示资料）",
+        "身份认证与密钥轮换"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟503最多重试几次？",
+      "heading": "错误码处理",
+      "bm25_sources": [
+        "错误码处理",
+        "请求限流",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "错误码处理",
+        "请求限流",
+        "文件上传限制"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟哪些错误码不应该自动重试？",
+      "heading": "错误码处理",
+      "bm25_sources": [
+        "错误码处理",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "错误码处理",
+        "请求限流",
+        "工单分类"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟文件上传最大多少MB？",
+      "heading": "文件上传限制",
+      "bm25_sources": [
+        "文件上传限制"
+      ],
+      "baseline_sources": [
+        "文件上传限制",
+        "星舟API指南（演示资料）",
+        "身份认证与密钥轮换"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟PDF最多支持多少页？",
+      "heading": "文件上传限制",
+      "bm25_sources": [
+        "文件上传限制",
+        "请求限流",
+        "星舟工单规范（演示资料）"
+      ],
+      "baseline_sources": [
+        "文件上传限制",
+        "请求限流",
+        "错误码处理"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟扫描PDF该怎么处理？",
+      "heading": "文件上传限制",
+      "bm25_sources": [
+        "文件上传限制",
+        "错误码处理",
+        "工单状态流转"
+      ],
+      "baseline_sources": [
+        "文件上传限制",
+        "工单状态流转",
+        "星舟API指南（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟会话用什么标识保存状态？",
+      "heading": "会话与权限",
+      "bm25_sources": [
+        "会话与权限",
+        "工单状态流转"
+      ],
+      "baseline_sources": [
+        "会话与权限",
+        "错误码处理",
+        "星舟工单规范（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟能访问别人的会话吗？",
+      "heading": "会话与权限",
+      "bm25_sources": [
+        "会话与权限"
+      ],
+      "baseline_sources": [
+        "会话与权限",
+        "星舟API指南（演示资料）",
+        "身份认证与密钥轮换"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟同一会话并发修改会怎样？",
+      "heading": "会话与权限",
+      "bm25_sources": [
+        "会话与权限",
+        "请求限流",
+        "幂等请求"
+      ],
+      "baseline_sources": [
+        "会话与权限",
+        "请求限流",
+        "幂等请求"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单必须填写哪些信息？",
+      "heading": "工单必填信息",
+      "bm25_sources": [
+        "工单必填信息",
+        "幂等请求",
+        "星舟工单规范（演示资料）"
+      ],
+      "baseline_sources": [
+        "工单必填信息",
+        "幂等请求",
+        "工单优先级与响应时间"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单标题最长多少字符？",
+      "heading": "工单必填信息",
+      "bm25_sources": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "审核与取消"
+      ],
+      "baseline_sources": [
+        "工单必填信息",
+        "幂等请求",
+        "工单优先级与响应时间"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单描述不能包含什么信息？",
+      "heading": "工单必填信息",
+      "bm25_sources": [
+        "工单必填信息",
+        "星舟工单规范（演示资料）",
+        "重试与重复提交"
+      ],
+      "baseline_sources": [
+        "工单必填信息",
+        "幂等请求",
+        "工单优先级与响应时间"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟high优先级多久首次响应？",
+      "heading": "工单优先级与响应时间",
+      "bm25_sources": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "baseline_sources": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "请求限流"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟normal优先级首次响应目标？",
+      "heading": "工单优先级与响应时间",
+      "bm25_sources": [
+        "工单优先级与响应时间",
+        "审核与取消"
+      ],
+      "baseline_sources": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "请求限流"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟low优先级首次响应时间？",
+      "heading": "工单优先级与响应时间",
+      "bm25_sources": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "工单必填信息"
+      ],
+      "baseline_sources": [
+        "工单优先级与响应时间",
+        "审核与取消",
+        "请求限流"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单有哪些类别？",
+      "heading": "工单分类",
+      "bm25_sources": [
+        "工单分类",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "baseline_sources": [
+        "工单分类",
+        "幂等请求",
+        "工单必填信息"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟数据库连接故障归哪个工单类别？",
+      "heading": "工单分类",
+      "bm25_sources": [
+        "工单分类",
+        "数据备份与恢复",
+        "启动失败排查"
+      ],
+      "baseline_sources": [
+        "工单分类",
+        "启动失败排查",
+        "数据备份与恢复"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟限流故障归哪个工单类别？",
+      "heading": "工单分类",
+      "bm25_sources": [
+        "工单分类",
+        "工单优先级与响应时间",
+        "请求限流"
+      ],
+      "baseline_sources": [
+        "工单分类",
+        "工单必填信息",
+        "工单优先级与响应时间"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单草稿可以修改什么？",
+      "heading": "审核与取消",
+      "bm25_sources": [
+        "审核与取消",
+        "工单状态流转",
+        "星舟工单规范（演示资料）"
+      ],
+      "baseline_sources": [
+        "审核与取消",
+        "工单状态流转",
+        "幂等请求"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟用户拒绝工单审批后怎么办？",
+      "heading": "审核与取消",
+      "bm25_sources": [
+        "审核与取消",
+        "星舟工单规范（演示资料）",
+        "工单状态流转"
+      ],
+      "baseline_sources": [
+        "审核与取消",
+        "会话与权限",
+        "星舟工单规范（演示资料）"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟审批期间重启能继续吗？",
+      "heading": "审核与取消",
+      "bm25_sources": [
+        "审核与取消",
+        "优雅停机"
+      ],
+      "baseline_sources": [
+        "审核与取消",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单有哪几种状态？",
+      "heading": "工单状态流转",
+      "bm25_sources": [
+        "工单状态流转",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "baseline_sources": [
+        "工单状态流转",
+        "幂等请求",
+        "会话与权限"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟问题解决后如何更新工单？",
+      "heading": "工单状态流转",
+      "bm25_sources": [
+        "工单状态流转",
+        "工单分类",
+        "审核与取消"
+      ],
+      "baseline_sources": [
+        "工单状态流转",
+        "工单必填信息",
+        "工单分类"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单由谁修改状态？",
+      "heading": "工单状态流转",
+      "bm25_sources": [
+        "工单状态流转",
+        "会话与权限",
+        "星舟工单规范（演示资料）"
+      ],
+      "baseline_sources": [
+        "工单状态流转",
+        "会话与权限",
+        "幂等请求"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单网络断开后怎么重新提交？",
+      "heading": "重试与重复提交",
+      "bm25_sources": [
+        "重试与重复提交",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ],
+      "baseline_sources": [
+        "重试与重复提交",
+        "幂等请求",
+        "工单必填信息"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟工单响应丢失能再建一张吗？",
+      "heading": "重试与重复提交",
+      "bm25_sources": [
+        "重试与重复提交",
+        "工单优先级与响应时间",
+        "星舟工单规范（演示资料）"
+      ],
+      "baseline_sources": [
+        "工单优先级与响应时间",
+        "重试与重复提交",
+        "请求限流"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "星舟恢复工单任务前应该检查什么？",
+      "heading": "重试与重复提交",
+      "bm25_sources": [
+        "优雅停机",
+        "重试与重复提交",
+        "数据备份与恢复"
+      ],
+      "baseline_sources": [
+        "重试与重复提交",
+        "优雅停机",
+        "启动失败排查"
+      ],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "法国首都天气预报",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "今年世界杯冠军",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "推荐一款手机",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "股票明天会上涨吗",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "番茄炒蛋食谱",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    },
+    {
+      "question": "月球距离地球有多远",
+      "heading": null,
+      "bm25_sources": [],
+      "baseline_sources": [],
+      "bm25_pass": true,
+      "baseline_pass": true
+    }
+  ]
+}

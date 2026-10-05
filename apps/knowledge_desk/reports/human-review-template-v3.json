@@ -1,0 +1,392 @@
+{
+  "dataset_sha256": "9a274e3ba12a807840bd188635e147d8afabf2dce401a9729757864bdd64fa30",
+  "answers_sha256": "85eeaec056da78637ed98a6ed5327745691404528d642852bb8f0a526b94dc63",
+  "reviewer": "",
+  "instructions": "先阅读HTML中问题、预期事实、答案及引用原文，再填写三个布尔评分和备注。资料支持的额外事实不因超出预期事实而自动判错；同时检查时序和问题场景。所有null须改为true/false后才可导入。",
+  "reviews": [
+    {
+      "id": "retry-1",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "retry-2",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "retry-3",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "backup",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "http",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "shutdown",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "purchase-approval",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "supplier",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "quotation",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "acceptance",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "payment",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "return",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-sla",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-password",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-owner",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-rpo",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-penalty",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-phone",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-account",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-secret",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-film",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-food",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-weather",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "injection",
+      "mode": "hybrid",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "retry-1",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "retry-2",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "retry-3",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "backup",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "http",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "shutdown",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "purchase-approval",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "supplier",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "quotation",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "acceptance",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "payment",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "return",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-sla",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-password",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-owner",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-rpo",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-penalty",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-phone",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-account",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "missing-secret",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-film",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-food",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "unrelated-weather",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    },
+    {
+      "id": "injection",
+      "mode": "rerank",
+      "answer_correct": null,
+      "citations_support_answer": null,
+      "refusal_correct": null,
+      "notes": ""
+    }
+  ]
+}

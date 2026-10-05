@@ -1,0 +1,943 @@
+{
+  "created_at": "2026-10-05T04:44:06.845509+00:00",
+  "scope": "改动检索前冻结的旧版BM25挑战集结果",
+  "cases": [
+    {
+      "id": "paraphrase-00-0",
+      "question": "给星舟配一台机器，最少得有多少算力和内存？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "运行环境"
+      ]
+    },
+    {
+      "id": "paraphrase-00-1",
+      "question": "What runtime and database versions does Xingzhou require?",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-00-2",
+      "question": "我要给星舟开虚拟机，配置门槛有哪些？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": []
+    },
+    {
+      "id": "paraphrase-01-0",
+      "question": "负载均衡想探测星舟还活着，该访问哪个地址？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-01-1",
+      "question": "Xingzhou readiness probe URL and timeout?",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "身份认证与密钥轮换",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-01-2",
+      "question": "监控要确认星舟在线，探活接口和正常响应怎么配？",
+      "headings": [
+        "服务端口与健康检查"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "工单分类",
+        "工单优先级与响应时间",
+        "服务端口与健康检查"
+      ]
+    },
+    {
+      "id": "paraphrase-02-0",
+      "question": "星舟起不来，排障从哪儿开始看？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": []
+    },
+    {
+      "id": "paraphrase-02-1",
+      "question": "Where should I look when Xingzhou cannot boot?",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-02-2",
+      "question": "星舟启动一直报错，定位问题的先后次序是什么？",
+      "headings": [
+        "启动失败排查"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "工单分类",
+        "启动失败排查",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-03-0",
+      "question": "星舟进程准备退出，手头没干完的活咋办？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": []
+    },
+    {
+      "id": "paraphrase-03-1",
+      "question": "How does Xingzhou drain in-flight work on SIGTERM?",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "优雅停机",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-03-2",
+      "question": "星舟下线时会给正在跑的任务留多长收尾时间？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "优雅停机",
+        "工单优先级与响应时间",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "paraphrase-04-0",
+      "question": "星舟的库坏了，找哪天的副本，怎样安全救回来？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": []
+    },
+    {
+      "id": "paraphrase-04-1",
+      "question": "Xingzhou backup schedule, retention, and restore drill?",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-04-2",
+      "question": "星舟的历史数据副本几点留、能留多久？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "paraphrase-05-0",
+      "question": "星舟上线后大量报错，什么条件下退回老版本？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "发布与回滚",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "paraphrase-05-1",
+      "question": "When should a Xingzhou release be rolled back?",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-05-2",
+      "question": "星舟升级完错误变多了，降回旧版前要留哪些东西？",
+      "headings": [
+        "发布与回滚"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-06-0",
+      "question": "星舟换访问令牌时，旧的还能用多久？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-06-1",
+      "question": "How to rotate Xingzhou API credentials without downtime?",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查",
+        "星舟API指南（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-06-2",
+      "question": "调用星舟接口的凭据放网址里行吗，隔多久换一次？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "paraphrase-07-0",
+      "question": "星舟说我请求太频繁了，缓多久再发？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "请求限流",
+        "幂等请求",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "paraphrase-07-1",
+      "question": "What should a Xingzhou client do on HTTP429?",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-07-2",
+      "question": "星舟一个租户一分钟能调几回，能同时跑几件事？",
+      "headings": [
+        "请求限流"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-08-0",
+      "question": "星舟建单点了两次，怎样还拿到同一个编号？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "重试与重复提交",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-08-1",
+      "question": "Which idempotency key is needed for Xingzhou ticket creation?",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-08-2",
+      "question": "星舟建单同一个请求标识换了内容，服务怎么处理？",
+      "headings": [
+        "幂等请求"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限",
+        "幂等请求",
+        "错误码处理"
+      ]
+    },
+    {
+      "id": "paraphrase-09-0",
+      "question": "星舟说没权限或者凭据失效，能无限重发吗？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限",
+        "启动失败排查",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-09-1",
+      "question": "Which Xingzhou status codes should never be retried?",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "服务端口与健康检查",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-09-2",
+      "question": "星舟返回５０３，重发上限和等待策略是啥？",
+      "headings": [
+        "错误码处理"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "请求限流",
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "paraphrase-10-0",
+      "question": "星舟不认识我扫出来的文档，怎么让它读到字？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-10-1",
+      "question": "Can Xingzhou ingest scanned PDFs directly?",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-10-2",
+      "question": "星舟收资料时，大小、页数和字符编码有啥门槛？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-11-0",
+      "question": "星舟两个人能互相看聊天和资料吗？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "星舟API指南（演示资料）",
+        "星舟工单规范（演示资料）",
+        "星舟部署手册（演示资料）"
+      ]
+    },
+    {
+      "id": "paraphrase-11-1",
+      "question": "How does Xingzhou isolate conversations and concurrent edits?",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-11-2",
+      "question": "星舟两条消息同时改一个聊天线程会怎样？",
+      "headings": [
+        "会话与权限"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "paraphrase-12-0",
+      "question": "给星舟提问题单，要把哪些故障细节交代清楚？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "工单分类",
+        "工单必填信息",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-12-1",
+      "question": "What must a Xingzhou incident report contain?",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-12-2",
+      "question": "写星舟问题单时，哪些敏感内容绝对不能塞进去？",
+      "headings": [
+        "工单必填信息"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "幂等请求",
+        "星舟工单规范（演示资料）",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-13-0",
+      "question": "星舟线上彻底挂了，值班的人多久先回复我？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": []
+    },
+    {
+      "id": "paraphrase-13-1",
+      "question": "Xingzhou SLA for high, normal and low priority incidents?",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "工单优先级与响应时间",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-13-2",
+      "question": "星舟只是咨询优化，最迟几个工作日收到第一次回应？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "数据备份与恢复"
+      ]
+    },
+    {
+      "id": "paraphrase-14-0",
+      "question": "星舟连不上库，这张问题单该分给哪类？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "工单分类",
+        "工单状态流转"
+      ]
+    },
+    {
+      "id": "paraphrase-14-1",
+      "question": "Which category handles Xingzhou launch and release failures?",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-14-2",
+      "question": "星舟接口请求太多被拒，该归账号还是接口类？",
+      "headings": [
+        "工单分类"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "工单分类",
+        "请求限流",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "paraphrase-15-0",
+      "question": "星舟还没点确认就断电，问题单草稿回来还能审吗？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "审核与取消",
+        "工单必填信息",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-15-1",
+      "question": "Does rejecting a Xingzhou draft create a ticket?",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-15-2",
+      "question": "星舟机器重开后，没审完的草稿还能接着处理吗？",
+      "headings": [
+        "审核与取消"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "错误码处理",
+        "工单状态流转",
+        "审核与取消"
+      ]
+    },
+    {
+      "id": "paraphrase-16-0",
+      "question": "星舟问题已经处理好了，单子接下来怎么标记？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "工单状态流转",
+        "错误码处理",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-16-1",
+      "question": "What is the Xingzhou ticket lifecycle?",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-16-2",
+      "question": "星舟的问题单从收到到办完有哪些状态？",
+      "headings": [
+        "工单状态流转"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "工单状态流转",
+        "优雅停机",
+        "工单分类"
+      ]
+    },
+    {
+      "id": "paraphrase-17-0",
+      "question": "星舟已经存了单但我没收到回包，再跑会不会多一张？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "paraphrase",
+      "sources": [
+        "优雅停机"
+      ]
+    },
+    {
+      "id": "paraphrase-17-1",
+      "question": "How to recover a Xingzhou ticket operation after a lost response?",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "development",
+      "tag": "english",
+      "sources": [
+        "请求限流",
+        "启动失败排查"
+      ]
+    },
+    {
+      "id": "paraphrase-17-2",
+      "question": "星舟建单后断网，用老请求编号再发会怎样？",
+      "headings": [
+        "重试与重复提交"
+      ],
+      "kind": "positive",
+      "split": "validation",
+      "tag": "paraphrase",
+      "sources": [
+        "幂等请求",
+        "请求限流",
+        "发布与回滚"
+      ]
+    },
+    {
+      "id": "unrelated-00",
+      "question": "怎么煮意大利面？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-01",
+      "question": "Which camera should I buy for travel?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-02",
+      "question": "猫咪为什么喜欢纸箱？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-03",
+      "question": "How far is Mars from the sun?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-04",
+      "question": "给我写一首秋天的诗",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-05",
+      "question": "明天上海是否下雨？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-06",
+      "question": "What is the capital of Canada?",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-07",
+      "question": "英国国王是谁？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-08",
+      "question": "南极企鹅有哪些种类？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-09",
+      "question": "烤蛋糕要放多少糖？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "unrelated-10",
+      "question": "电影盗梦空间讲了什么？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "development",
+      "tag": "unrelated",
+      "sources": [
+        "请求限流"
+      ]
+    },
+    {
+      "id": "unrelated-11",
+      "question": "太阳的温度有多高？",
+      "headings": [],
+      "kind": "out_of_scope",
+      "split": "validation",
+      "tag": "unrelated",
+      "sources": []
+    },
+    {
+      "id": "missing-fact-00",
+      "question": "星舟工单超过响应时限，每小时赔偿多少钱？",
+      "headings": [
+        "工单优先级与响应时间"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "sources": [
+        "工单优先级与响应时间",
+        "请求限流",
+        "幂等请求"
+      ]
+    },
+    {
+      "id": "missing-fact-01",
+      "question": "星舟数据库备份的加密密码是什么？",
+      "headings": [
+        "数据备份与恢复"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "sources": [
+        "数据备份与恢复",
+        "启动失败排查",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "missing-fact-02",
+      "question": "星舟API密钥当前的真实值是什么？",
+      "headings": [
+        "身份认证与密钥轮换"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "sources": [
+        "身份认证与密钥轮换",
+        "工单分类",
+        "工单必填信息"
+      ]
+    },
+    {
+      "id": "missing-fact-03",
+      "question": "星舟每次服务重启的计费价格是多少？",
+      "headings": [
+        "优雅停机"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "sources": [
+        "启动失败排查",
+        "优雅停机",
+        "会话与权限"
+      ]
+    },
+    {
+      "id": "missing-fact-04",
+      "question": "星舟生产机器的公网IP地址是什么？",
+      "headings": [
+        "运行环境"
+      ],
+      "kind": "unsupported_fact",
+      "split": "development",
+      "tag": "near_negative",
+      "sources": [
+        "发布与回滚",
+        "运行环境"
+      ]
+    },
+    {
+      "id": "missing-fact-05",
+      "question": "星舟上传文档后用于训练的保留期限是多少？",
+      "headings": [
+        "文件上传限制"
+      ],
+      "kind": "unsupported_fact",
+      "split": "validation",
+      "tag": "near_negative",
+      "sources": [
+        "文件上传限制",
+        "星舟部署手册（演示资料）",
+        "工单优先级与响应时间"
+      ]
+    }
+  ]
+}
